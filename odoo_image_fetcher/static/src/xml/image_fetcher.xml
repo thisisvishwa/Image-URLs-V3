@@ -1,0 +1,15 @@
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="image_fetcher.main_image">
+        <img id="main-image" class="image-fetcher" t-att-src="main_image_url" alt="Main Product Image" onerror="this.onerror=null; this.src='/odoo_image_fetcher/static/src/img/placeholder.png';"/>
+    </t>
+    <t t-name="image_fetcher.extra_media">
+        <div id="extra-media" class="image-fetcher">
+            <t t-foreach="extra_media_urls" t-as="url">
+                <img t-att-src="url" alt="Extra Media" class="image-fetcher" onerror="this.onerror=null; this.src='/odoo_image_fetcher/static/src/img/placeholder.png';"/>
+            </t>
+        </div>
+    </t>
+</templates>
+```
